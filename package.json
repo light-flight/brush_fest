@@ -11,8 +11,11 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/pwa": "^3.0.0-0",
     "nuxt": "^2.0.0",
-    "@nuxtjs/pwa": "^3.0.0-0"
+    "vuetify": "^2.1.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@mdi/font": "^4.4.95"
+  }
 }
