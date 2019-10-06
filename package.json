@@ -1,7 +1,7 @@
 {
   "name": "brush_dance_fest",
   "version": "1.0.0",
-  "description": "Dance Festival site",
+  "description": "Первый всероссийский фестиваль бального танца",
   "author": "Georgy Yuriev",
   "private": true,
   "scripts": {
