@@ -12,27 +12,27 @@
       >
 
         <v-card-text>
-          <v-btn outlined class="mx-4 white--text">
+          <v-btn outlined class="mx-4 mb-3 white--text">
             <v-icon left link href="https://www.instagram.com/brush_fest/" target="_blank">mdi-instagram</v-icon>
             Instagram
           </v-btn>
-          <v-btn light color="#F8EC48" link href="https://forms.gle/UKpj82JGUBMz9Kvd6" target="blank">
+          <v-btn class="mb-3" light color="#F8EC48" link href="https://forms.gle/UKpj82JGUBMz9Kvd6" target="blank">
             Отправить заявку
           </v-btn>
         </v-card-text>
 
-        <v-btn-toggle background-color="transparent" rounded>
-          <v-btn
-            v-for="(item, i) in items"
-            :key="i"
-            link
-            :href="item.link"
-            class="px-6"
-          >
-            <v-icon v-text="item.icon" left></v-icon>
-            {{ item.text }}
-          </v-btn>
-        </v-btn-toggle>
+        <v-btn
+          v-for="(item, i) in items"
+          :key="i"
+          link
+          :href="item.link"
+          class="px-6"
+          small
+          text
+        >
+          <v-icon v-text="item.icon" left small></v-icon>
+          {{ item.text }}
+        </v-btn>
 
         <v-card-text class="white--text pt-0">
         </v-card-text>

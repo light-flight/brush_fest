@@ -11,7 +11,7 @@
 
       <v-toolbar-title>
         BRUSH
-        <small v-if="$vuetify.breakpoint.smAndUp">Танцевальный фестиваль</small>
+        <small>Танцевальный фестиваль</small>
       </v-toolbar-title>
 
 
@@ -21,13 +21,13 @@
       <v-menu
         top
         :close-on-content-click="closeOnContentClick"
-        v-if="$vuetify.breakpoint.xsOnly"
       >
         <template v-slot:activator="{ on }">
           <v-btn
             small
             light
             v-on="on"
+            class="menu-btn"
           >
             <v-icon>mdi-menu</v-icon>
           </v-btn>
@@ -38,6 +38,7 @@
             v-for="(item, index) in items"
             nuxt-link
             :href="item.link"
+            v-bind:key="item.icon"
           >
             <v-icon left small>{{ item.icon }}</v-icon>
             <v-list-item-title>{{ item.title }}</v-list-item-title>
@@ -46,19 +47,17 @@
       </v-menu>
 
 
-      <v-btn v-else light color="#F8EC48" link href="https://forms.gle/UKpj82JGUBMz9Kvd6" target="blank">
+      <v-btn class="send-request-big" light color="#F8EC48" link href="https://forms.gle/UKpj82JGUBMz9Kvd6" target="blank">
         Отправить заявку
       </v-btn>
 
-
-      <template #extension v-if="$vuetify.breakpoint.xsOnly">
-        <v-btn light small color="#F8EC48" link href="https://forms.gle/UKpj82JGUBMz9Kvd6" target="blank">
+      <template #extension>
+        <v-btn class="send-request-small" light small color="#F8EC48" link href="https://forms.gle/UKpj82JGUBMz9Kvd6" target="blank">
          Отправить заявку
         </v-btn>
-      </template>
-      <template #extension v-else>
         <v-toolbar-items
           v-for="(item, index) in items"
+          v-bind:key="item.icon"
         >
           <v-btn tile outlined text
           nuxt-link
@@ -97,6 +96,23 @@ export default {
     .v-toolbar__content,
     .v-toolbar__extension {
       padding-left: 116px;
+    }
+  }
+  @media (max-width: 499px) {
+    .v-toolbar__items,
+    .send-request-big {
+      display: none !important;
+    }
+  }
+  @media (max-width: 630px) {
+    .v-toolbar__title small {
+      display: none !important;
+    }
+  }
+  @media (min-width: 500px) {
+    .menu-btn,
+    .send-request-small {
+      display: none !important;
     }
   }
 </style>
