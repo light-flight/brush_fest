@@ -36,7 +36,7 @@
         <v-list>
           <v-list-item
             v-for="(item, index) in items"
-            nuxt-link
+            link
             :href="item.link"
             v-bind:key="item.icon"
           >
@@ -45,7 +45,6 @@
           </v-list-item>
         </v-list>
       </v-menu>
-
 
       <v-btn class="send-request-big" light color="#F8EC48" link href="https://forms.gle/UKpj82JGUBMz9Kvd6" target="blank">
         Отправить заявку
@@ -77,8 +76,9 @@
 export default {
   data: () => ({
     items: [
-      { title: 'Положение', icon: 'mdi-file', link: '/rules' },
-      { title: 'Контакты', icon: 'mdi-phone', link: '/contacts' },
+      { title: 'Положение', icon: 'mdi-file', link: '#rules' },
+      { title: 'Контакты', icon: 'mdi-phone', link: '#contacts' },
+      { title: 'Instagram', icon: 'mdi-instagram', link: 'https://www.instagram.com/brush_fest/' },
     ],
     closeOnContentClick: true,
   }),
@@ -98,7 +98,18 @@ export default {
       padding-left: 116px;
     }
   }
-  @media (max-width: 499px) {
+  @media (min-width: 960px) {
+    img.logo {
+      width: 118px;
+    }
+    .main-app-bar {
+      .v-toolbar__content,
+      .v-toolbar__extension {
+        padding-left: 120px;
+      }
+    }
+  }
+  @media (max-width: 599px) {
     .v-toolbar__items,
     .send-request-big {
       display: none !important;
@@ -109,7 +120,7 @@ export default {
       display: none !important;
     }
   }
-  @media (min-width: 500px) {
+  @media (min-width: 600px) {
     .menu-btn,
     .send-request-small {
       display: none !important;
