@@ -8,11 +8,13 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=deploy --cleanup"
   },
   "dependencies": {
     "@nuxtjs/pwa": "^3.0.0-0",
     "nuxt": "^2.0.0",
+    "push-dir": "^0.4.1",
     "vuetify": "^2.1.1"
   },
   "devDependencies": {
