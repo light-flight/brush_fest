@@ -1,6 +1,40 @@
 <template>
   <div class="bg">
     <div class="container">
+
+      <v-sheet class="rules" elevation='4' color="white">
+        <h2>
+          <v-icon large>mdi-camera </v-icon>
+          Фото и видеоматериалы с прошедшего фестиваля
+        </h2>
+        <p>
+          Если вы хотите получить фотографии без водяного знака, напишите номера фотографий нам на почту:
+        </p>
+        <p>
+          <v-icon left>mdi-email</v-icon> brush.festival@gmail.com
+        </p>
+        <div class="media-cards">
+          <div
+            v-for="card in cards"
+            :key="card.title"
+            class="media-item"
+          >
+            <a :href="card.href">
+              <v-card>
+                <v-img
+                  :src="card.src"
+                  class="white--text align-end"
+                  gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+                  height="200px"
+                >
+                  <v-card-title v-text="card.title"></v-card-title>
+                </v-img>
+              </v-card>
+            </a>
+          </div>
+        </div>
+      </v-sheet>
+
       <v-sheet class="event" elevation='4' color="white">
         <div class="image">
           <img src="poster.jpg" alt="" class="poster">
@@ -163,6 +197,20 @@
         { text: 'kopytnikoff@yandex.ru', icon: 'mdi-email' },
         { text: '8(903)798-41-02 (Николай Валентинович)', icon: 'mdi-phone' },
       ],
+      cards: [
+        { title: 'Массовый спорт',
+          src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg',
+          href: 'https://drive.google.com/open?id=1mlzTl_Xeelg30ez0eA5ppRbY7oFNV7H3',
+        },
+        { title: 'Ансамбли',
+          src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg',
+          href: 'https://drive.google.com/open?id=1Ea5WFe0PVunGKnpnNkF2lu4XQ6EbGAvV',
+        },
+        { title: 'Видео',
+          src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg',
+          href: 'https://www.youtube.com/playlist?list=PLqKyk6IE64I9AIEXIZR_zDXueV-etUtcX',
+        },
+      ],
     }),
   }
 </script>
@@ -173,6 +221,17 @@
   }
   .container {
     max-width: 960px;
+  }
+  .media-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .media-item {
+      width: calc(100% / 3.1);
+    }
+    a {
+      text-decoration: none;
+    }
   }
   .event {
     margin: 1em 0 2em;
