@@ -19,8 +19,8 @@
             :key="card.title"
             class="media-item"
           >
-            <a :href="card.href">
-              <v-card>
+            <a :href="card.href" target="_blank">
+              <v-card :hover="true">
                 <v-img
                   :src="card.src"
                   class="white--text align-end"
@@ -199,15 +199,15 @@
       ],
       cards: [
         { title: 'Массовый спорт',
-          src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg',
+          src: 'media/comp.jpg',
           href: 'https://drive.google.com/open?id=1mlzTl_Xeelg30ez0eA5ppRbY7oFNV7H3',
         },
         { title: 'Ансамбли',
-          src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg',
+          src: 'media/fest.jpg',
           href: 'https://drive.google.com/open?id=1Ea5WFe0PVunGKnpnNkF2lu4XQ6EbGAvV',
         },
         { title: 'Видео',
-          src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg',
+          src: 'media/video.jpg',
           href: 'https://www.youtube.com/playlist?list=PLqKyk6IE64I9AIEXIZR_zDXueV-etUtcX',
         },
       ],
