@@ -52,7 +52,8 @@ export default {
   data: () => ({
     items: [
       { text: '8(903)798-41-02', icon: 'mdi-phone', link: 'tel:+79037984102' },
-      { text: 'kopytnikoff@yandex.ru', icon: 'mdi-email', link: 'mailto:kopytnikoff@yandex.ru' },
+      { text: '8(495)571-21-58', icon: 'mdi-phone', link: 'tel:+74955712158' },
+      { text: 'brush.festival@gmail.com', icon: 'mdi-email', link: 'mailto:brush.festival@gmail.com' },
     ],
   }),
 }
