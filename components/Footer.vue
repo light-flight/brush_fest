@@ -12,8 +12,8 @@
       >
 
         <v-card-text>
-          <v-btn outlined class="mx-4 mb-3 white--text">
-            <v-icon left link href="https://www.instagram.com/brush_fest/" target="_blank">mdi-instagram</v-icon>
+          <v-btn outlined class="mx-4 mb-3 white--text" link href="https://www.instagram.com/brush_fest/" target="blank">
+            <v-icon left>mdi-instagram</v-icon>
             Instagram
           </v-btn>
           <v-btn class="mb-3" light color="#F8EC48" link href="https://forms.gle/UKpj82JGUBMz9Kvd6" target="blank">
