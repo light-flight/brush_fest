@@ -7,7 +7,7 @@
       <v-sheet class="event" elevation='4' color="white">
 
         <div class="image">
-          <img src="poster.jpg" alt="" class="poster">
+          <img src="poster.png" alt="" class="poster">
         </div>
 
         <div class="info-block">
@@ -324,7 +324,7 @@
   export default {
     data: () => ({
       items: [
-        { text: '28-29 ноября 2020г.', icon: 'mdi-calendar' },
+        { text: '24 апреля 2021г.', icon: 'mdi-calendar' },
         { text: 'г.Химки, ДК «Родина», Ленинский проспект, 2а', icon: 'mdi-city' },
         { text: 'brush.festival@gmail.com', icon: 'mdi-email' },
         { text: '8 (903) 798-41-02 (Николай Валентинович)', icon: 'mdi-phone' },
